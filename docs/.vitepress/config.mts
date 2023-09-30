@@ -1,9 +1,15 @@
 import { defineConfig } from 'vitepress'
+import markdownItTextualUml from 'markdown-it-textual-uml';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Notes",
   description: "Some Awesome Notes",
+  markdown: {
+    config(md) {
+      md.use(markdownItTextualUml);
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
